@@ -1,1 +1,12 @@
-{}
+{
+    "declare const": {
+		"prefix": "const",
+		"body": "const ${1:name}: ${2:type} = $0;",
+		"description": "\"const\" declares a variable that cannot be reassigned a new value once it has been initialized (immutable)."
+	},
+	"declare var": {
+		"prefix": "var",
+		"body": "var ${1:name}: ${2:type} = $0;",
+		"description": "A pointer is a reference to the memory space of a variable that the pointer is pointing to. \"var\" declares a variable that can be reassigned a new value at any time (mutable)."
+	},
+}
