@@ -1,0 +1,38 @@
+{
+  "name": "zig-znippets",
+  "displayName": "Znippets",
+  "description": "Code snippets for Zig Programming Language",
+  "version": "1.0.0",
+  "publisher": "levrotech",
+  "icon": "images/zig-mark.png",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/levrotech/zig-znippets"
+  },
+  "engines": {
+    "vscode": "^1.68.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "zig",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "@commitlint/cli": "^17.8.0",
+    "@commitlint/config-conventional": "^17.8.0"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "release:patch": "npm version patch --sign-git-tag",
+    "release:minor": "npm version minor --sign-git-tag",
+    "release:major": "npm version major --sign-git-tag"
+  }
+}
