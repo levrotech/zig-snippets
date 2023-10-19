@@ -10,6 +10,7 @@ Below is a list of all available snippets and the triggers of each one. Snippets
 
 - Standard Library
 - Variables
+- Pointers
 - Types
 - Loops
 
@@ -32,6 +33,13 @@ Some snippets have not been added since ZLS provides an ergonomic and always upd
 | :-------: | ------- | -------- |
 | `const⇥`   | declare a constant | `const name: type = ;` |
 | `var⇥`   | declare a variable | `var name: type = ;` |
+
+### Pointers
+
+| Trigger  | Content | Preview |
+| :-------: | ------- | -------- |
+| `ptr⇥`   | declare a pointer | `const name_ptr: *type = &;` <br> `var name_ptr: *type = &;` |
+| `ptrλ⇥`   | declare a pointer constants | `const name_ptr: *const type = &;` |
 
 ### Types
 
