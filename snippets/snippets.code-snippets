@@ -1,4 +1,15 @@
 {
+	"import std library": {
+		"prefix": "imstd",
+		"body": "const std = @import(\"std\");",
+		"description": "@import the standard library into the current scope. The standard library in Zig is a collection of modules that provide basic functionality, such as string manipulation, I/O, and memory management."
+	},
+	"add standard out writer": {
+		"prefix": "writer",
+		"body": "const stdout = std.io.getStdOut().writer();",
+		"description": "This is a writer for Standard Out that can print() to it. Unlike std.debug.print(), the Standard Out writer can fail with an error."
+	},
+
     "declare const": {
 		"prefix": "const",
 		"body": "const ${1:name}: ${2:type} = $0;",
