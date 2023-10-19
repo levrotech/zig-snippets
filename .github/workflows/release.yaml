@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 16
 
-      - name: Run npm clean-install
+      - name: NPM clean-install
         run: npm ci
 
       - name: Publish to Marketplace
