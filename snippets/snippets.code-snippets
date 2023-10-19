@@ -21,6 +21,17 @@
 		"description": "A pointer is a reference to the memory space of a variable that the pointer is pointing to. \"var\" declares a variable that can be reassigned a new value at any time (mutable)."
 	},
 
+	"declare a pointer": {
+		"prefix": "ptr",
+		"body": "${1|var,const|} ${2:name_ptr}: *${3:type} = &${0};",
+		"description": "A pointer in Zig is a variable that stores the memory address of another variable (reference). Pointers are useful for accessing and manipulating data that is stored in other parts of memory."
+	},
+	"declare a pointer to constants": {
+		"prefix": "ptrλ",
+		"body": "${1:const} ${2:name_ptr}: *const ${3:type} = &${0};",
+		"description": "A pointer in Zig is a variable that stores the memory address of another variable (reference). Pointers are useful for accessing and manipulating data that is stored in other parts of memory. Pointer with a \"*const\" keywords is used when pointing to constants (immutable)"
+	},
+
     "add a while loop": {
 		"prefix": "while",
 		"body" : [
