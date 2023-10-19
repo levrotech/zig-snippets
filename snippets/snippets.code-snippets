@@ -19,4 +19,68 @@
 		],
 		"description": "Zig 'while' statements create a loop that runs while the condition is true. 'while' statements can have an optional 'continue expression' which runs every time the while loop continues (either at the end of the loop or when an explicit 'continue' is invoked)"
 	},
+
+	"declare a function": {
+		"prefix": "fn",
+		"body": [
+			"fn ${1:name}($2) ${3:void} {"
+			"	$0"
+			"}"
+		],
+		"description": "A Function is a block of code that can be reused by other parts of your program. Functions can take arguments and can return values"
+	},
+	"declare a public function": {
+		"prefix": "pfn",
+		"body": [
+			"pub fn ${1:name}($2) ${3:void} {"
+			"	$0"
+			"}"
+		],
+		"description": "A Function is a block of code that can be reused by other parts of your program. A Public Function is a function that can be accessed from anywhere in your program."
+	},
+	"declare a function with an error union type": {
+		"prefix": "fn!",
+		"body": [
+			"fn ${1:name}($2) !${3:void} {"
+			"	$0"
+			"}"
+		],
+		"description": "A Function is a block of code that can be reused by other parts of your program. Functions can take arguments and can return values. A Function with a '!void' return type in Zig is a function that can either return a value or return an error"
+	},
+	"declare a public function with an error union type": {
+		"prefix": "pfn!",
+		"body": [
+			"pub fn ${1:name}($2) !${3:void} {"
+			"	$0"
+			"}"
+		],
+		"description": "A Function is a block of code that can be reused by other parts of your program. A Public Function is a function that can be accessed from anywhere in your program. Functions can take arguments and can return values. A Function with a '!void' return type in Zig is a function that can either return a value or return an error"
+	},
+	"declare an error set": {
+		"prefix": "err",
+		"body": [
+			"const ${1:Error} = error {"
+			"	$2"
+			"};"
+		],
+		"description": "In Zig, an error is a value. Errors are named so we can identify things that can go wrong. Errors are created in \"error sets\", which are just a collection of named errors."
+	},
+	"declare an enum": {
+		"prefix": "enum",
+		"body" : [
+			"const ${1:Enum} = enum$2($3) {"
+			"	$4"
+			"};"
+		],
+		"description": "An \"enum\" is a Zig construct that lets you give names to numeric values and store them in a set. They look a lot like error sets."
+	},
+	"declare a struct": {
+		"prefix": "struct",
+		"body" : [
+			"const ${1:Struct} = struct {"
+			"	$2"
+			"};"
+		],
+		"description": "A struct in Zig is a type that can be used to represent a collection of data. Structs are useful for representing things like people, places, and things."
+	}
 }
