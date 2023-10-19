@@ -1,3 +1,5 @@
+[![Create Release](https://github.com/levrotech/zig-znippets/actions/workflows/release.yaml/badge.svg)](https://github.com/levrotech/zig-znippets/actions/workflows/release.yaml)
+
 # Znippets
 
 This extension contains code snippets for Ziglang for [VSCode][code].
