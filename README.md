@@ -62,11 +62,4 @@ Some snippets have not been added since ZLS provides an ergonomic and always upd
 | `while⇥`   | add a while loop | `while() : () {}` |
 | `switch⇥`   | add a switch statement | `switch () {}` |
 
-### Standard Library
-
-| Trigger  | Content | Preview |
-| :-------: | ------- | -------- |
-| `imstd⇥`   | import the standard library into the current scope | `const std = @import ("std");` |
-| `writer⇥`   | add the writer to the standard output | `const stdout = std.io.getStdOut.writer();` |
-
 [code]: https://code.visualstudio.com/
