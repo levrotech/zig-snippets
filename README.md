@@ -59,7 +59,8 @@ Some snippets have not been added since ZLS provides an ergonomic and always upd
 
 | Trigger  | Content | Preview |
 | :-------: | ------- | -------- |
-| `while⇥`   | add a while loop | `while() : () {}` |### Standard Library
+| `while⇥`   | add a while loop | `while() : () {}` |
+| `switch⇥`   | add a switch statement | `switch () {}` |
 
 ### Standard Library
 
