@@ -3,12 +3,11 @@
 # top-most EditorConfig file
 root = true
 
-end_of_line = lf
-charset = utf-8
-
 [**]
-trim_trailing_whitespace = true
+charset = utf-8
+end_of_line = lf
 insert_final_newline = false
+trim_trailing_whitespace = true
 
 [**.code-snippets]
 indent_size = 4
