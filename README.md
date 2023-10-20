@@ -1,3 +1,5 @@
+[![VSCode Extension](https://img.shields.io/badge/VSCode-Extension-orange)](https://marketplace.visualstudio.com/items?itemName=levrotech.zig-znippets)
+[![Open-VSX Extension](https://img.shields.io/badge/Open--VSX-Extension-purple)](https://open-vsx.org/extension/levrotech/zig-znippets)
 [![Create Release](https://github.com/levrotech/zig-znippets/actions/workflows/release.yaml/badge.svg)](https://github.com/levrotech/zig-znippets/actions/workflows/release.yaml)
 
 # Znippets
