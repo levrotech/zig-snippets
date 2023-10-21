@@ -54,7 +54,9 @@ Some snippets have not been added since ZLS provides an ergonomic and always upd
 | `arr⇥`   | declare an array | `const name = [_]type{};` <br> `var name = [_]type{};` |
 | `matrix⇥`   | declare a multidimensional array | `const name = [_][_]type{[_]u8{}};` <br> `var name = [_][_]type{[_]u8{}};` |
 | `err⇥`   | declare an error set | `const Error = error {};` |
+| `opt⇥`   | declare a optional | `const name: ?type = ;` <br> `var name: ?type = ;` |
 | `enum⇥`   | declare an enum | `const Enum = enum {};` |
+| `union⇥`   | declare an union | `const Union = union {};` |
 | `struct⇥`   | declare a struct | `const Struct = struct {};` |
 
 ### Loops
