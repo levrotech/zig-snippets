@@ -1,3 +1,5 @@
+[![VSCode Extension](https://img.shields.io/badge/VSCode-Extension-blue)](https://marketplace.visualstudio.com/items?itemName=levrotech.zig-znippets)
+[![Open-VSX Extension](https://img.shields.io/badge/Open--VSX-Extension-purple)](https://open-vsx.org/extension/levrotech/zig-znippets)
 [![Create Release](https://github.com/levrotech/zig-znippets/actions/workflows/release.yaml/badge.svg)](https://github.com/levrotech/zig-znippets/actions/workflows/release.yaml)
 
 # Znippets
@@ -52,7 +54,9 @@ Some snippets have not been added since ZLS provides an ergonomic and always upd
 | `arr⇥`   | declare an array | `const name = [_]type{};` <br> `var name = [_]type{};` |
 | `matrix⇥`   | declare a multidimensional array | `const name = [_][_]type{[_]u8{}};` <br> `var name = [_][_]type{[_]u8{}};` |
 | `err⇥`   | declare an error set | `const Error = error {};` |
-| `enum⇥`   | declare an enum | `const Enum = enum() {};` |
+| `opt⇥`   | declare a optional | `const name: ?type = ;` <br> `var name: ?type = ;` |
+| `enum⇥`   | declare an enum | `const Enum = enum {};` |
+| `union⇥`   | declare an union | `const Union = union {};` |
 | `struct⇥`   | declare a struct | `const Struct = struct {};` |
 
 ### Loops

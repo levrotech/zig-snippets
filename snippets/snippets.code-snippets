@@ -23,33 +23,13 @@
 
     "declare a pointer": {
         "prefix": "ptr",
-        "body": "${1|var,const|} ${2:name_ptr}: *${3:type} = &${0};",
+        "body": "${1|const,var|} ${2:name_ptr}: *${3:type} = &${0};",
         "description": "A pointer in Zig is a variable that stores the memory address of another variable (reference). Pointers are useful for accessing and manipulating data that is stored in other parts of memory."
     },
     "declare a pointer to constants": {
         "prefix": "ptrλ",
         "body": "${1:const} ${2:name_ptr}: *const ${3:type} = &${0};",
         "description": "A pointer in Zig is a variable that stores the memory address of another variable (reference). Pointers are useful for accessing and manipulating data that is stored in other parts of memory. Pointer with a \"*const\" keywords is used when pointing to constants (immutable)"
-    },
-
-    "add a while loop": {
-        "prefix": "while",
-        "body": [
-            "while($1) : ($2) {"
-            "    $0"
-            "}"
-        ],
-        "description": "Zig 'while' statements create a loop that runs while the condition is true. 'while' statements can have an optional 'continue expression' which runs every time the while loop continues (either at the end of the loop or when an explicit 'continue' is invoked)"
-    },
-    "add a switch statement": {
-        "prefix": "switch",
-        "body": [
-            "switch ($1) {"
-            "    $2 => $3,"
-            "    else => $0,"
-            "}"
-        ],
-        "description": "The \"switch\" statement lets you match the possible values of an expression and perform a different action for each."
     },
 
     "declare a function": {
@@ -90,13 +70,13 @@
     },
     "declare an array": {
         "prefix": "arr",
-        "body": "${1|var,const|} ${2:name} = [${3:_}]${4:type}{$0};"
+        "body": "${1|const,var|} ${2:name} = [${3:_}]${4:type}{$0};"
         "description": "An array in Zig is a sequential collection of elements of the same type. When Zig can infer the size of the array, you can use '_' for the size."
     },
     "declare a multidimensional array": {
         "prefix": "matrix",
         "body": [
-            "${1|var,const|} ${2:name} = [${3:_}][${4:_}]${5:type}{",
+            "${1|const,var|} ${2:name} = [${3:_}][${4:_}]${5:type}{",
             "   [${6:_}]${7:type}{$0}"
             "};"
         ],
@@ -106,27 +86,61 @@
         "prefix": "err",
         "body": [
             "const ${1:Error} = error {"
-            "    $2"
+            "    $0"
             "};"
         ],
         "description": "In Zig, an error is a value. Errors are named so we can identify things that can go wrong. Errors are created in \"error sets\", which are just a collection of named errors."
     },
+    "declare an optional": {
+        "prefix": "opt",
+        "body": "${1|const,var|} ${2:name}: ?${3:type} = $0;",
+        "description": "Sometimes a variable might hold a value or it might not. Zig has a way of expressing this idea called Optionals. An optional type has a \'?\' infront of it\'s data type."
+    },
     "declare an enum": {
         "prefix": "enum",
         "body" : [
-            "const ${1:Enum} = enum$2($3) {"
-            "    $4"
+            "const ${1:Enum} = enum {"
+            "    $0"
             "};"
         ],
         "description": "An \"enum\" is a Zig construct that lets you give names to numeric values and store them in a set. They look a lot like error sets."
+    },
+    "declare an union": {
+        "prefix": "union",
+        "body": [
+            "const ${1:Union} = union {"
+            "   ${2:name}: ${3:type},"
+            "};"
+        ],,
+        "description": "Sometimes a variable might hold a value or it might not. Zig has a way of expressing this idea called Optionals. An optional type has a \'?\' infront of it\'s data type."
     },
     "declare a struct": {
         "prefix": "struct",
         "body" : [
             "const ${1:Struct} = struct {"
-            "    $2"
+            "    $0"
             "};"
         ],
         "description": "A struct in Zig is a type that can be used to represent a collection of data. Structs are useful for representing things like people, places, and things."
+    },
+
+    "add a while loop": {
+        "prefix": "while",
+        "body": [
+            "while($1) : ($2) {"
+            "    $0"
+            "}"
+        ],
+        "description": "Zig 'while' statements create a loop that runs while the condition is true. 'while' statements can have an optional 'continue expression' which runs every time the while loop continues (either at the end of the loop or when an explicit 'continue' is invoked)"
+    },
+    "add a switch statement": {
+        "prefix": "switch",
+        "body": [
+            "switch ($1) {"
+            "    $2 => $3,"
+            "    else => $0,"
+            "}"
+        ],
+        "description": "The \"switch\" statement lets you match the possible values of an expression and perform a different action for each."
     }
 }
