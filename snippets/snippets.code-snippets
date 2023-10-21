@@ -32,26 +32,6 @@
         "description": "A pointer in Zig is a variable that stores the memory address of another variable (reference). Pointers are useful for accessing and manipulating data that is stored in other parts of memory. Pointer with a \"*const\" keywords is used when pointing to constants (immutable)"
     },
 
-    "add a while loop": {
-        "prefix": "while",
-        "body": [
-            "while($1) : ($2) {"
-            "    $0"
-            "}"
-        ],
-        "description": "Zig 'while' statements create a loop that runs while the condition is true. 'while' statements can have an optional 'continue expression' which runs every time the while loop continues (either at the end of the loop or when an explicit 'continue' is invoked)"
-    },
-    "add a switch statement": {
-        "prefix": "switch",
-        "body": [
-            "switch ($1) {"
-            "    $2 => $3,"
-            "    else => $0,"
-            "}"
-        ],
-        "description": "The \"switch\" statement lets you match the possible values of an expression and perform a different action for each."
-    },
-
     "declare a function": {
         "prefix": "fn",
         "body": [
@@ -128,5 +108,25 @@
             "};"
         ],
         "description": "A struct in Zig is a type that can be used to represent a collection of data. Structs are useful for representing things like people, places, and things."
+    },
+
+    "add a while loop": {
+        "prefix": "while",
+        "body": [
+            "while($1) : ($2) {"
+            "    $0"
+            "}"
+        ],
+        "description": "Zig 'while' statements create a loop that runs while the condition is true. 'while' statements can have an optional 'continue expression' which runs every time the while loop continues (either at the end of the loop or when an explicit 'continue' is invoked)"
+    },
+    "add a switch statement": {
+        "prefix": "switch",
+        "body": [
+            "switch ($1) {"
+            "    $2 => $3,"
+            "    else => $0,"
+            "}"
+        ],
+        "description": "The \"switch\" statement lets you match the possible values of an expression and perform a different action for each."
     }
 }
