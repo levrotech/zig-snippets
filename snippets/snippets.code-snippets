@@ -114,8 +114,8 @@
     "declare an enum": {
         "prefix": "enum",
         "body" : [
-            "const ${1:Enum} = enum$2($3) {"
-            "    $4"
+            "const ${1:Enum} = enum {"
+            "    $0"
             "};"
         ],
         "description": "An \"enum\" is a Zig construct that lets you give names to numeric values and store them in a set. They look a lot like error sets."
