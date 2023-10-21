@@ -23,7 +23,7 @@
 
     "declare a pointer": {
         "prefix": "ptr",
-        "body": "${1|var,const|} ${2:name_ptr}: *${3:type} = &${0};",
+        "body": "${1|const,var|} ${2:name_ptr}: *${3:type} = &${0};",
         "description": "A pointer in Zig is a variable that stores the memory address of another variable (reference). Pointers are useful for accessing and manipulating data that is stored in other parts of memory."
     },
     "declare a pointer to constants": {
@@ -90,13 +90,13 @@
     },
     "declare an array": {
         "prefix": "arr",
-        "body": "${1|var,const|} ${2:name} = [${3:_}]${4:type}{$0};"
+        "body": "${1|const,var|} ${2:name} = [${3:_}]${4:type}{$0};"
         "description": "An array in Zig is a sequential collection of elements of the same type. When Zig can infer the size of the array, you can use '_' for the size."
     },
     "declare a multidimensional array": {
         "prefix": "matrix",
         "body": [
-            "${1|var,const|} ${2:name} = [${3:_}][${4:_}]${5:type}{",
+            "${1|const,var|} ${2:name} = [${3:_}][${4:_}]${5:type}{",
             "   [${6:_}]${7:type}{$0}"
             "};"
         ],
