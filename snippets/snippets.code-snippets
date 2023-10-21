@@ -106,7 +106,7 @@
         "prefix": "err",
         "body": [
             "const ${1:Error} = error {"
-            "    $2"
+            "    $0"
             "};"
         ],
         "description": "In Zig, an error is a value. Errors are named so we can identify things that can go wrong. Errors are created in \"error sets\", which are just a collection of named errors."
@@ -124,7 +124,7 @@
         "prefix": "struct",
         "body" : [
             "const ${1:Struct} = struct {"
-            "    $2"
+            "    $0"
             "};"
         ],
         "description": "A struct in Zig is a type that can be used to represent a collection of data. Structs are useful for representing things like people, places, and things."
