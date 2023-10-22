@@ -30,6 +30,9 @@
     "@commitlint/config-conventional": "^17.8.0"
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release:patch": "npm version patch --sign-git-tag",
+    "release:minor": "npm version minor --sign-git-tag",
+    "release:major": "npm version major --sign-git-tag"
   }
 }

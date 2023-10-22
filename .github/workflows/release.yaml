@@ -1,9 +1,11 @@
-name: Create Release
-
 on:
   push:
+    branches:
+      - main
     tags:
       - 'v*'
+
+name: Create Release
 
 jobs:
   publish-to-vs-marketplace:
@@ -13,16 +15,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node
+        uses: actions/setup-node@v1
         with:
           node-version: 16
-          cache: 'npm'
 
-      - name: Install npm packages
+      - name: NPM clean-install
         run: npm ci
 
-      - name: Publish to marketplace
+      - name: Publish to Marketplace
         uses: HaaLeo/publish-vscode-extension@v1
         with:
           pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
@@ -35,16 +36,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node
+        uses: actions/setup-node@v1
         with:
           node-version: 16
-          cache: 'npm'
 
-      - name: Install npm packages
+      - name: NPM clean-install
         run: npm ci
 
-      - name: Publish to registry
+      - name: Publish to Registry
         uses: HaaLeo/publish-vscode-extension@v1
         with:
           pat: ${{ secrets.OPEN_VSX_TOKEN }}
@@ -56,10 +56,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Create release
+      - name: Create Release
         run: gh release create ${{ github.ref }} --generate-notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
