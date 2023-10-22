@@ -2,7 +2,7 @@
   "name": "zig-znippets",
   "displayName": "Znippets",
   "description": "Code snippets for Zig Programming Language",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "publisher": "levrotech",
   "icon": "images/zig-mark.png",
   "license": "SEE LICENSE IN LICENSE.md",
