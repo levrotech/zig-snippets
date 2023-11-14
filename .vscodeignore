@@ -1,5 +1,3 @@
 .vscode/**
 .vscode-test/**
 .github/**
-.gitignore
-.husky/**
